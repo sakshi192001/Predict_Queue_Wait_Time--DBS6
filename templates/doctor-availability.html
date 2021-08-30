@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding-top: 5%;
+          padding-bottom: 5%;
+        }
+        </style>
+    </head>
+<body style="background-color: #EFF6F5;margin: 0mm;">
+    <header style="max-width: 100vh;min-height: 5vh;background-color: #235072;">
+        <div style="max-width: 80%;padding-left: 30%;padding-top: 2%;">
+          <a href="logout" style="color: #EFF6F5; padding-left: 100%"> Logout  </a>
+      </div> 
+  </header>
+  <div>
+    <table style="width:100%;">
+        <tr>
+          <th>Name</th>
+          <th>OPD</th> 
+          <th>Days</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>Cardio</td>
+          <td>Monday and Wednesday</td>
+          <td>10am-12.30pm</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>Cardio</td>
+          <td>All Days</td>
+          <td>11am-1pm</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>Cardio</td>
+          <td>Friday and Sunday</td>
+          <td>3pm-5.30pm</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>General Physician</td>
+            <td>Thursday, Friday, Saturday and Sunday</td>
+            <td>2.30pm-5.30pm</td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td>General Physician</td>
+            <td>Tuesday and Wednesday</td>
+            <td>9am-12pm</td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td>General Physician</td>
+            <td>Monday, Tuesday and Wednesday</td>
+            <td>10am-12.30pm</td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>Neurologist</td>
+            <td>All Days</td>
+            <td>2pm-4pm</td>
+          </tr>
+          <tr>
+            <td>H</td>
+            <td>Neurologist</td>
+            <td>Thursday, Friday and Sunday</td>
+            <td>10am-1pm</td>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td>Neurologist</td>
+            <td>Friday, Saturday and Sunday</td>
+            <td>2pm-3.30pm</td>
+          </tr>
+          <tr>
+            <td>J</td>
+            <td>Urologist</td>
+            <td>All Days</td>
+            <td>3.30pm-7.30pm</td>
+          </tr>
+          <tr>
+            <td>K</td>
+            <td>Urologist</td>
+            <td>Thursday, Friday,Saturday and Sunday</td>
+            <td>4pm-6pm</td>
+          </tr>
+          <tr>
+            <td>L</td>
+            <td>Urologist</td>
+            <td>All Days</td>
+            <td>9am-11am</td>
+          </tr>
+      </table>
+      
+  </div>
+  <footer style="max-width: 100vh;min-height: 10vh;background-color: #235072;">
+    <button onclick="document.location='home'" style="max-width: 100vh;min-height: 10vh;background-color: #235072;color: #ffffff;font-size: 20px;">
+     <i class="fas fa-home" style="color: #ffffff;"></i><br> Home
+    </button>
+ </footer>
+</body>
+</html>

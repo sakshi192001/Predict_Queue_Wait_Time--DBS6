@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <title>Document</title>
+</head>
+<body style="background-color:#EFF6F5;" >
+    <div class="container-back">
+        <div>
+           <button class="back-button" onclick="document.location='/'">
+            <i class="fas fa-arrow-left"  ></i>
+           </button>
+        </div>
+    </div>
+    <div class="text-container" >
+        <div id="text-hello">
+            <p class="bold" style="color:#235072">HELLO,</p>
+    </div>
+    <div class="container">
+      <form action="{{ url_for('login') }}" method="post">
+        <input type="text" placeholder="Enter Username" name="username" required>  
+        <div class="msg">{{ msg1 }}</div>
+        <input type="password" placeholder="Answer" name="Answer" required>
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Submit" style="background-color: #BBE4DD;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 60%; border-radius: 20px;">
+        
+        <!--<button onclick="document.location='homepage'" style="border-radius: 20px;">Sign-In</button>-->
+        <!-- <input type="submit" value="Sign-In" style="background-color: #BBE4DD;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 60%; border-radius: 20px;">-->
+      </div>
+     </form>
+     
+</body>
+</html>

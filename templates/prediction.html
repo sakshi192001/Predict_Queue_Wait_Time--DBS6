@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body style="background-color: #EFF6F5;margin: 0mm;">
+    <header style="max-width: 100vh;min-height: 5vh;background-color: #235072;">
+        <div style="max-width: 80%;padding-left: 30%;padding-top: 2%;">
+            <a href="logout" style="color: #EFF6F5; padding-left: 100%"> Logout  </a>
+      </div> 
+  </header>
+  <div style="padding-bottom: 42%;">
+    <p class="bold" style="color:#235072;font-size: 20px;padding-left: 20px;">Predicited OPD Wait Time</p>
+    <p style="color:#235072;font-size: 20px;padding-left: 15px;">Your estimated OPD wait time in minutes is: {{msg}}</p>
+    <p class="bold" style="color:#235072;font-size: 20px;padding-left: 20px;">Queue Status</p>
+    <p style="color:#235072;font-size: 20px;padding-left: 15px;">Your current position in the queue is: {{pts}}</p>
+    <button onclick="document.location='home'" style="background-color: #235072;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; border-radius: 20px;">Cancel</button>
+  </div>
+  <footer style="max-width: 100vh;min-height: 10vh;background-color: #235072;">
+    <button onclick="document.location='home'" style="max-width: 100vh;min-height: 10vh;background-color: #235072;color: #ffffff;font-size: 20px;">
+     <i class="fas fa-home" style="color: #ffffff;"></i><br> Home
+    </button>
+ </footer>
+</body>
+</html>

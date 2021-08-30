@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body style="background-color: #EFF6F5;margin: 0mm;">
+    <header style="max-width: 100vh;min-height: 5vh;background-color: #235072;">
+        <div style="max-width: 80%;padding-left: 30%;padding-top: 2%;">
+          <!--<input type="rfid-number" placeholder="Enter RFID-Number" name="rfid" required>
+          <input type="submit">-->
+          <a href="logout" style="color: #EFF6F5; padding-left: 100%"> Logout  </a>
+      </div> 
+  </header>
+  <div>
+    <p style="color:#235072;font-weight: bold;font-size: 25px;">PLANNING TO VISIT 
+        <br> THE HOSPITAL,</p> 
+    <p style="color:#235072;font-size: 20px;">CALCULATE THE EXPECTED 
+       <br> REGISTRATION WAITING TIME
+       <div class="msg">{{ msg }}</div>
+        </p> 
+    </div>
+    <form action="{{ url_for('planningavisit') }}" method="post">
+  
+       <label for="doctor" style="color: #235072;">Select Doctor You Wish To See</label>
+       <select name="doctor" id="doctor">
+         
+ <option value="A">A</option>
+ <option value="B">B</option>
+ <option value="C">C</option>
+ <option value="D">D</option>
+ <option value="E">E</option>
+ <option value="F">F</option>
+ <option value="G">G</option>
+ <option value="H">H</option>
+ <option value="I">I</option>
+ <option value="J">J</option>
+ <option value="K">K</option>
+ <option value="L">L</option>
+</select>
+<br>
+        <label for="day" style="color: #235072;">Select Day Of Week You Wish To visit:</label>
+<select name="day" id="day">
+  <option value="Day" name="day">Day</option>
+  <option value="Monday" name="day">Monday</option>
+  <option value="Tuesday" name="day">Tuesday</option>
+  <option value="Wednesday" name="day">Wednesday</option>
+  <option value="Thursday" name="day">Thursday</option>
+  <option value="Friday" name="day">Friday</option>
+  <option value="Saturday" name="day">Saturday</option>
+  <option value="Sunday" name="day">Sunday</option>
+</select>
+<br>
+        <label for="appt" style="color: #235072;">Select a time:</label>
+        <br>
+        <input type="time" id="time" name="time"required style="color: #235072;width: 100%;">
+        <!--<label for="appt" style="color: #235072;">Select Depatment You Wish to Visit</label>
+        <select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>-->
+<br>
+
+  <div style="padding-bottom: 49%;">  
+    <input type="submit" value="Calculate" style="background-color: #235072;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; border-radius: 20px;">
+  </div>
+    </form>
+  <footer style="max-width: 100vh;min-height: 10vh;background-color: #235072;">
+    <button onclick="document.location='home'" style="max-width: 100vh;min-height: 10vh;background-color: #235072;color: #ffffff;font-size: 20px;">
+     <i class="fas fa-home" style="color: #ffffff;"></i><br> Home
+    </button>
+ </footer>
+</body>
+</html>

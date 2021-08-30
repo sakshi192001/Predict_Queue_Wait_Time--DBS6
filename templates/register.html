@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body style="background-color: #EFF6F5;">
+    <div class="back">
+        <div>
+           <button class="back-button" onclick="document.location='/'">
+            <i class="fas fa-arrow-left"  ></i>
+           </button>
+        </div>
+    </div>
+    <div class="container-details">
+        <form action="{{ url_for('register') }}" method="post">
+          <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required style="color: #235072;">
+  <label for="email">E-mail:</label>
+  <input type="text" id="email" name="email" required style="color: #235072;">
+  <p>Please select your gender:
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label></p> 
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required style="color: #235072;">
+    <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required style="color: #235072;">
+    <label for="cpassword">Confirm Password:</label>
+  <input type="password" id="cpassword" name="cpassword" required style="color: #235072;">
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Register" style="background-color: #235072;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 60%; border-radius: 20px;">
+      </div>
+      <div class="dont-have-account">
+        Already have a acoount?<a href="login">Sign-In</a>
+                
+          </div>
+        </form>
+</body>
+</html>

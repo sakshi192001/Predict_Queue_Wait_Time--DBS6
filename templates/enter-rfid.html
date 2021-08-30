@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body style="background-color: #EFF6F5;margin: 0mm;">
+    <header style="max-width: 100vh;min-height: 5vh;background-color: #235072;">
+        <div style="max-width: 80%;padding-left: 30%;padding-top: 2%;">
+          <a href="enter-rfid" style="color: #EFF6F5;padding-left: 100%"> Enter RFID-Number  </a>
+      </div> 
+    </header>
+  <div style="margin: 10px;">
+    <div>
+      <p class="bold" style="color:#235072">Enter RFID-Number Issued By The Hospital</p>
+    </div>
+  </div>
+  <form method="post">
+  <input type="text" placeholder="Enter RFID-Number" name="rfid" required>
+    <div style="padding-bottom: 95%;">
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Submit" style="background-color: #BBE4DD;color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; border-radius: 20px;">
+        </div>
+  </form> 
+           <footer style="max-width: 100vh;min-height: 10vh;background-color: #235072;">
+        <button onclick="document.location='home'" style="max-width: 100vh;min-height: 10vh;background-color: #235072;color: #000000;font-size: 20px; ">
+         <i class="fas fa-home" style="color: #000000;"></i><br> Home
+        </button>
+     </footer>
+</body>
+</html>
